@@ -564,13 +564,69 @@ img {
   visibility: visible;
 }
 
-/*=============== WORK ===============*/
+/*=============== PROJECTS ===============*/
+.project__container {
+  padding-top: 1rem;
+}
 
+.project__filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .75rem;
+  margin-bottom: 2rem;
+}
+
+.project__item {
+  cursor: pointer;
+  color: var(--title-color);
+  padding: .25rem .75rem;
+  font-weight: var(--font-medium);
+  border-radius: .5rem;
+}
+
+.project__card {
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.project__img {
+  border-radius: 1rem;
+  margin-bottom: .75rem;
+}
+
+.project__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: .25rem;
+}
+
+.project__button {
+  width: max-content;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+}
+
+.project__button:hover {
+  transform: translateX(.25rem);
+}
+
+.project__icon {
+  font-size: 1rem;
+  transition: .4s;
+}
 
 /* Active item work*/
+.active-project {
+  background-color: var(--first-color);
+  color: var(--body-color);
+}
 
-
-/*=============== TESTIMONIAL ===============*/
+/*=============== STAR PROJECTS ===============*/
 
 
 /* Swiper class */

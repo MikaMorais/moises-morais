@@ -32,12 +32,26 @@ modalClose.forEach((mclose)  => {
 });
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
+let mixerPortfolio = mixitup('.project__container', {
+    selectors: {
+        target: '.project__card'
+    },
+    animation: {
+        duration: 300
+    }
+});
 
 /* Link active work */ 
+const linkProject = document.querySelectorAll('.project__item')
 
+function activeProject() {
+    linkProject.forEach(l => l.classList.remove('active-project'))
+    this.classList.add('active-project')
+}
 
-/*=============== SWIPER TESTIMONIAL ===============*/
+linkProject.forEach(l => l.addEventListener('click', activeProject))
+
+/*=============== SWIPER STAR PROJECTS ===============*/
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
