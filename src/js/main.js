@@ -31,6 +31,29 @@ modalClose.forEach((mclose)  => {
     })
 });
 
+
+/*=============== SWIPER STAR PROJECTS ===============*/
+let swiperStarProjects = new Swiper(".star__container", {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 48,
+        },
+        
+      },
+});
+
+
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.project__container', {
     selectors: {
@@ -50,9 +73,6 @@ function activeProject() {
 }
 
 linkProject.forEach(l => l.addEventListener('click', activeProject))
-
-/*=============== SWIPER STAR PROJECTS ===============*/
-
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
