@@ -1,82 +1,78 @@
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
-
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
-}
-
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
-
-const linkAction = () => {
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-
-/*=============== ADD BLUR TO HEADER ===============*/
-const blurHeader = () =>{
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeader = () => {
     const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the blur-header class to the header tag
-    this.scrollY >= 50 ? header.classList.add('blur-header') 
-                       : header.classList.remove('blur-header')
+    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+    this.scrollY >= 50 ? header.classList.add('scroll-header') 
+                       : header.classList.remove('scroll-header')
 }
-window.addEventListener('scroll', blurHeader)
+window.addEventListener('scroll', scrollHeader)
 
-/*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-        contactMessage = document.getElementById('contact-message')
 
-const sendEmail = (e) => {
-    e.preventDefault()
+/*=============== SERVICES MODAL ===============*/
+const modalViews = document.querySelectorAll('.services__modal')
+    modalButtons = document.querySelectorAll('.services__button'),
+    modalClose = document.querySelectorAll('.services__modal-close')
+    
+let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
+}
 
-    //serviceID - TemplateID - #form - publicKey
-    emailjs.sendForm('serviceID', 'TemplateID', '#contact-form', 'key')
-    .then(() => {
-        //Show sent message
-        contactMessage.textContent = 'Message sent successfully ✅'
-
-        //Remove message after five seconds
-        setTimeout(() => {
-            contactMessage.textContent = ''
-        }, 5000)
-
-        //Clear fields
-        contactForm.reset()
-
-    }, () => {
-        //Show error message
-        contactMessage.textContent = 'Message not sent (service unvailable) ❌'
+modalButtons.forEach((mbutton, i)  => {
+    mbutton.addEventListener('click', () => {
+        modal(i)
     })
+});
+
+modalClose.forEach((mclose)  => {
+    mclose.addEventListener('click', () => {
+        modalViews.forEach((mview) => {
+            mview.classList.remove('active-modal')
+        })
+    })
+});
+
+
+/*=============== SWIPER STAR PROJECTS ===============*/
+let swiperStarProjects = new Swiper(".star__container", {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 48,
+        },
+        
+      },
+});
+
+
+/*=============== MIXITUP FILTER PORTFOLIO ===============*/
+let mixerPortfolio = mixitup('.project__container', {
+    selectors: {
+        target: '.project__card'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+/* Link active work */ 
+const linkProject = document.querySelectorAll('.project__item')
+
+function activeProject() {
+    linkProject.forEach(l => l.classList.remove('active-project'))
+    this.classList.add('active-project')
 }
 
-contactForm.addEventListener('submit', sendEmail)
-
-/*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
-
+linkProject.forEach(l => l.addEventListener('click', activeProject))
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -99,6 +95,37 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
+
+/*=============== LIGHT DARK THEME ===============*/ 
+const themeButton = document.getElementById('theme-button')
+const lightTheme = 'light-theme'
+const iconTheme = 'ri-sun-line'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the light-theme class
+const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the light
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the lights / icon theme
+    document.body.classList.toggle(lightTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -109,7 +136,11 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__data, .home__social, .contact__container, .footer__container`)
-sr.reveal(`.home__image`, {origin: 'bottom'})
-sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
-sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
-sr.reveal(`.services__card, .projects__card`, {interval: 100})
+// sr.reveal(`.home__image`, {origin: 'bottom'})
+sr.reveal(`.home__handle`, {delay: 700})
+sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
+
+
+// sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
+// sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
+// sr.reveal(`.services__card, .project__card`, {interval: 100})
