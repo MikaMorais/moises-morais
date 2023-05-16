@@ -118,7 +118,7 @@ if (selectedTheme) {
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-    // Add or remove the light / icon theme
+    // Add or remove the lights / icon theme
     document.body.classList.toggle(lightTheme)
     themeButton.classList.toggle(iconTheme)
     // We save the theme and the current icon that the user chose
@@ -127,4 +127,20 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    //reset: true
+})
 
+sr.reveal(`.home__data, .home__social, .contact__container, .footer__container`)
+// sr.reveal(`.home__image`, {origin: 'bottom'})
+sr.reveal(`.home__handle`, {delay: 700})
+sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
+
+
+// sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
+// sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
+// sr.reveal(`.services__card, .project__card`, {interval: 100})
