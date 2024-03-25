@@ -69,36 +69,9 @@
             <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__data">
-                        <span class="home__greeting">Olá, me chamo</span>
                         <h1 class="home__name">Moises Morais</h1>
                         <h3 class="home__education">FullStack Developer</h3>
-
-                        <div class="home__buttons">
-                            <a download="" href="src/pdf/cv_moises_morais.pdf" class="button button--ghost">
-                                Baixar Currículo
-                            </a>
-                            <a href="#about" class="button">Sobre mim</a>
-                        </div>
                     </div>
-
-                    <div class="home__handle">
-                        <img src="src/img/perfil.png" alt="foto perfil de Moises Morais" class="home__img">
-                    </div>
-
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/moises-silva-de-morais/" target="_blank" class="home__social-link">
-                            <i class="ri-linkedin-box-fill"></i>
-                        </a>
-                        <a href="https://github.com/MikaMorais" target="_blank" class="home__social-link">
-                            <i class="ri-github-fill"></i>
-                        </a>
-                    </div>
-
-                    <a href="#about" class="home__scroll">
-                        <i class="ri-mouse-fill home__scroll-icon"></i>
-                        <span class="home__scroll-name">Scroll Down</span>
-                    </a>
-                    
                 </div>
             </section>
             
@@ -114,8 +87,8 @@
                         <div class="about__info">
                             <div class="about__box">
                                 <i class="ri-award-line about__icon"></i>
-                                <h3 class="about__title">Experiência</h3>
-                                <span class="about__subtitle">3 anos</span>
+                                <h3 class="about__title">Experiência Dev</h3>
+                                <span class="about__subtitle" id="years_exp"></span>
                             </div>
 
                             <div class="about__box">
@@ -132,10 +105,25 @@
                         </div>
 
                         <p class="about__description">
-                            Desenvolvedor de software e entusiasta de tecnologia.
-                            Conhecimentos em desenvolvimento e gestão de software, ofereço os melhores projetos resultano em trabalho de qualidade.
+                            Desenvolvedor apaixonado pela resolução de problemas complexos e pelo desenvolvimento de soluções inovadoras. 
+                            Com uma sólida formação acadêmica e experiência prática em diversos projetos, trago um conjunto diversificado de habilidades técnicas e uma mentalidade orientada para resultados e melhorias agéis.
                         </p>
-                        <a href="#contact" class="button">Contatos</a>
+
+                        <div class="home__buttons">
+                            <a download="" href="./pdf/cv_moises_morais.pdf" class="button button--ghost">
+                                Meu Currículo
+                            </a>
+                            
+                            <div  class="home__social">
+                                <a href="https://www.linkedin.com/in/moises-silva-de-morais/" target="_blank" class="home__social-link">
+                                    <i class="ri-linkedin-box-fill"></i>
+                                </a>
+                                <a href="https://github.com/MikaMorais" target="_blank" class="home__social-link">
+                                    <i class="ri-github-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -147,7 +135,7 @@
 
                 <div class="skills__container container grid">
                     <div class="skills__content">
-                        <h3 class="skills__title">Desenvolver FullStack <i class="ri-sparkling-fill"></i></h3>
+                        <h3 class="skills__title"> Stacks <i class="ri-sparkling-fill"></i></h3>
 
                         <div class="skills__box">
                             <div class="skills__group">
@@ -155,7 +143,7 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Java</h3>
+                                        <h3 class="skills__name">Java 8+</h3>
                                         <span class="skills__level">Avançado</span>
                                     </div>
                                 </div>
@@ -164,8 +152,8 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__level">Intermediário</span>
+                                        <h3 class="skills__name">Spring Boot</h3>
+                                        <span class="skills__level">Avançado</span>
                                     </div>
                                 </div>
 
@@ -173,7 +161,7 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Javascript</h3>
+                                        <h3 class="skills__name">Angular</h3>
                                         <span class="skills__level">Intermediário</span>
                                     </div>
                                 </div>
@@ -184,16 +172,7 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Java</h3>
-                                        <span class="skills__level">Avançado</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-award-fill"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">Python</h3>
+                                        <h3 class="skills__name">Typescript</h3>
                                         <span class="skills__level">Intermediário</span>
                                     </div>
                                 </div>
@@ -202,7 +181,16 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Javascript</h3>
+                                        <h3 class="skills__name">JavaScript</h3>
+                                        <span class="skills__level">Intermediário</span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <i class="ri-award-fill"></i>
+
+                                    <div>
+                                        <h3 class="skills__name">Python</h3>
                                         <span class="skills__level">Intermediário</span>
                                     </div>
                                 </div>
@@ -211,7 +199,7 @@
                     </div>
 
                     <div class="skills__content">
-                        <h3 class="skills__title">Desenvolver FullStack <i class="ri-sparkling-fill"></i></h3> 
+                        <h3 class="skills__title"> Stacks <i class="ri-sparkling-fill"></i></h3> 
 
                         <div class="skills__box">
                             <div class="skills__group">
@@ -219,7 +207,7 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Java</h3>
+                                        <h3 class="skills__name">Desenvolvimento APIs</h3>
                                         <span class="skills__level">Avançado</span>
                                     </div>
                                 </div>
@@ -228,8 +216,8 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__level">Intermediário</span>
+                                        <h3 class="skills__name">TDD</h3>
+                                        <span class="skills__level">JUnit, Mockito</span>
                                     </div>
                                 </div>
 
@@ -237,19 +225,20 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Javascript</h3>
-                                        <span class="skills__level">Intermediário</span>
+                                        <h3 class="skills__name">Versionamentos</h3>
+                                        <span class="skills__level">Git, GitLab, AzureDevOps</span>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="skills__group">
+
                                 <div class="skills__data">
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Java</h3>
-                                        <span class="skills__level">Avançado</span>
+                                        <h3 class="skills__name">DevOps</h3>
+                                        <span class="skills__level">CI/CD</span>
                                     </div>
                                 </div>
 
@@ -257,8 +246,8 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__level">Intermediário</span>
+                                        <h3 class="skills__name">Metodologia Ageis</h3>
+                                        <span class="skills__level">Scrum</span>
                                     </div>
                                 </div>
 
@@ -266,8 +255,8 @@
                                     <i class="ri-award-fill"></i>
 
                                     <div>
-                                        <h3 class="skills__name">Javascript</h3>
-                                        <span class="skills__level">Intermediário</span>
+                                        <h3 class="skills__name">Gestão</h3>
+                                        <span class="skills__level">Jira, Confluence, Reports</span>
                                     </div>
                                 </div>
                             </div>
@@ -293,16 +282,16 @@
                             <div class="services__modal-content">
                                 <i class="ri-close-fill services__modal-close"></i>
 
-                                <h3 class="services__modal-title">Desenvolvedor Web</h3>
+                                <h3 class="services__modal-title">Web</h3>
                                 <p class="services__modal-description">
-                                    Descrição Dev Web
+                                    descrição web
                                 </p>
 
                                 <ul class="services__modal-list">
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Desenvolvimento de sistemas web
+                                            Desenvolvimento completo do sistema web
                                         </p>
                                     </li>
 
@@ -339,7 +328,7 @@
                     </div>
 
                     <div class="services__card">
-                        <h3 class="services__title">Consultoria</h3>
+                        <h3 class="services__title">Gestão de Projetos</h3>
 
                         <span class="services__button">
                             Veja mais <i class="ri-arrow-right-line services__icon"></i>
@@ -351,42 +340,42 @@
 
                                 <h3 class="services__modal-title">Consultorias</h3>
                                 <p class="services__modal-description">
-                                    Descrição Dev Web
+                                    descrição consultoria
                                 </p>
 
                                 <ul class="services__modal-list">
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Desenvolvimento de sistemas web
+                                            Analise de projetos e soluções
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Interfaces responsivas
+                                            Aprimoração, manutenção e modernização de sistemas
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Criação de todos elementos
+                                            Organização, comunicação e relatórios detalhados
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Boas praticas de projetos
+                                            Liderança e Negociação
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Serviços customizados
+                                            Gerar valor ao negócio e alçancar metas definidas
                                         </p>
                                     </li>
                                 </ul>
@@ -407,42 +396,35 @@
 
                                 <h3 class="services__modal-title">Game Dev</h3>
                                 <p class="services__modal-description">
-                                    Descrição Dev Web
+                                   descrição game dev
                                 </p>
 
                                 <ul class="services__modal-list">
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Desenvolvimento de sistemas web
+                                            Game e System Desings 
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Interfaces responsivas
+                                            Jogos de Plataforma
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Criação de todos elementos
+                                            Pixel Arts e Sprites
                                         </p>
                                     </li>
 
                                     <li class="services__modal-item">
                                         <i class="ri-check-line services__modal-icon"></i>
                                         <p class="services__modal-info">
-                                            Boas praticas de projetos
-                                        </p>
-                                    </li>
-
-                                    <li class="services__modal-item">
-                                        <i class="ri-check-line services__modal-icon"></i>
-                                        <p class="services__modal-info">
-                                            Serviços customizados
+                                           Indie
                                         </p>
                                     </li>
                                 </ul>
@@ -460,7 +442,9 @@
                 <div class="star__container container swiper">
                     <div class="swiper-wrapper">
                         <div class="star__card swiper-slide">
-                            <img src="src/img/work1.jpg" alt="" class="star__img">
+                            <a href="https://github.com/MikaMorais/Projeto_Integrado_2022_Acidentes_Aereos_Brasil">
+                                <img src="src/img/projects/projetoAnaliseAerea3.jpg" alt="" class="star__img">       
+                            </a>
 
                             <h3 class="star__name">Analise Aerea Brasil</h3>
                             <p class="star__description">
@@ -471,8 +455,11 @@
                         </div>
 
                         <div class="star__card swiper-slide">
-                            <img src="src/img/work2.jpg" alt="" class="star__img">
 
+                            <a href="https://github.com/MikaMorais/point-control-api">
+                                <img src="src/img/projects/pointControl.png" alt="" class="star__img">          
+                            </a>
+                           
                             <h3 class="star__name">PointControl</h3>
                             <p class="star__description">
                                 Aplicação de Controle e Gestão de Ponto 
@@ -481,7 +468,10 @@
                         </div>
 
                         <div class="star__card swiper-slide">
-                            <img src="src/img/work3.jpg" alt="" class="star__img">
+
+                            <a href="https://github.com/MikaMorais/CareBot_Chatbot">
+                                <img src="src/img/projects/CareBot.png" alt="" class="star__img">
+                            </a>
 
                             <h3 class="star__name">CareBot Chatbot</h3>
                             <p class="star__description">
@@ -509,52 +499,52 @@
                 </div>
 
                 <div class="project__container container grid">
-                    <div class="project__card mix web">
-                        <img src="src/img/work1.jpg" alt="" class="project__img">
+                    <div class="project__card mix web hoverblur">
+                        <img src="src/img/projects/coming_soon.jpg" alt="" class="project__img">
 
                         <h3 class="project__title">Website</h3>
 
-                        <a href="#" class="project__button">
+                        <a href="#project" class="project__button">
                             Demo <i class="ri-arrow-right-line project__icon"></i>
                         </a>
                     </div>
 
-                    <div class="project__card mix backend">
-                        <img src="src/img/work2.jpg" alt="" class="project__img">
+                    <div class="project__card mix backend hoverblur">
+                        <img src="src/img/projects/coming_soon.jpg" alt="" class="project__img">
 
                         <h3 class="project__title">Web Project</h3>
 
-                        <a href="#" class="project__button">
+                        <a href="#project" class="project__button">
                             Demo <i class="ri-arrow-right-line project__icon"></i>
                         </a>
                     </div>
 
-                    <div class="project__card mix frontend">
-                        <img src="src/img/work3.jpg" alt="" class="project__img">
+                    <div class="project__card mix frontend hoverblur">
+                        <img src="src/img/projects/coming_soon.jpg" alt="" class="project__img">
 
                         <h3 class="project__title">Frontend Design</h3>
 
-                        <a href="#" class="project__button">
+                        <a href="#project" class="project__button">
                             Demo <i class="ri-arrow-right-line project__icon"></i>
                         </a>
                     </div>
 
-                    <div class="project__card mix web">
-                        <img src="src/img/work4.jpg" alt="" class="project__img">
+                    <div class="project__card mix web hoverblur">
+                        <img src="src/img/projects/coming_soon.jpg" alt="" class="project__img">
 
                         <h3 class="project__title">API Backend</h3>
 
-                        <a href="#" class="project__button">
+                        <a href="#project" class="project__button">
                             Demo <i class="ri-arrow-right-line project__icon"></i>
                         </a>
                     </div>
 
-                    <div class="project__card mix backend">
-                        <img src="src/img/work5.jpg" alt="" class="project__img">
+                    <div class="project__card mix backend hoverblur">
+                        <img src="src/img/projects/coming_soon.jpg" alt="" class="project__img">
 
                         <h3 class="project__title">Game Dev</h3>
 
-                        <a href="#" class="project__button">
+                        <a href="#project" class="project__button">
                             Demo <i class="ri-arrow-right-line project__icon"></i>
                         </a>
                     </div>
@@ -563,7 +553,6 @@
 
             <!--=============== CONTACT ===============-->
             <section class="contact section" id="contact">
-                <span class="section__subtitle">Me mande uma mensagem</span>
                 <h2 class="section__title">Contato</h2>
 
                 <div class="contact__container container grid">
@@ -574,14 +563,22 @@
                             <div class="contact__card">
                                 <i class="ri-mail-send-fill contact__card-icon"></i>
                                 <h3 class="contact__card-title">Email</h3>
-                                <span class="contact__card-data">EMAIL@gmail.com</span>
+                                <span class="contact__card-data">mika.devs100@gmail.com</span>
 
                                 <a href="mailto:examplemail@correo.com" target="_blank" class="contact__button">
                                     Digite <i class="ri-arrow-right-line contact__button-icon"></i>
                                 </a>
                             </div>
-
-                            
+                        </div>
+                        <br>
+                        <div class="contact__info">
+                            <div class="contact__card">
+                                <i class="ri-linkedin-box-fill contact__card-icon"></i>
+                                <h3 class="contact__card-title">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/moises-silva-de-morais/" target="_blank" class="contact__button">
+                                    Conecte <i class="ri-arrow-right-line contact__button-icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
